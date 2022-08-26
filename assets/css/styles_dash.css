@@ -1,0 +1,163 @@
+*{
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+/* clases especiales */
+.pt-3, .py-3{
+	padding: 2px!important;
+}
+
+/* Navegador */
+nav{	
+	background: #F2CC0C;
+	border-bottom: 1px solid #dee2e6!important;
+	z-index: 100!important;
+}
+nav .logo{
+	background: #EFCC94;
+}
+nav .logo img{
+	width: 30%;
+	height: 90%;	
+}
+
+/* Botón de Menú */
+#btn-menu-lateral i{	
+	margin-top: 6px;
+	padding: 5px;
+	border: 1px solid #dee2e6!important;	
+	border-radius: 3px;
+	font-size: 1.5em;	
+	color: #fff;
+	cursor: pointer;	
+}
+.activar-panel{	
+	flex: none!important;
+    max-width: 0!important;    
+    transition: all 200ms linear!important;
+    border: 0!important;    
+}
+.ampliar-principal{	
+    flex: 0 0 99.8%!important;
+    max-width: 99.8%!important;
+    transition: all 200ms linear!important;     
+    z-index: initial!important;
+}
+
+/* Principal */
+section{
+	/*height: 80vh;*/
+}
+.principal{
+	height: 62vh;	
+}
+
+/* Panel Lateral */
+aside{	
+    transition: all 200ms linear!important;    
+	border-right: 1px solid #dee2e6!important;	
+}
+aside .logo_usuario{
+	background: #fff;
+}
+aside .logo_usuario img{
+	float: left;
+}
+aside .logo_usuario h6{
+	padding-top: 18px;
+	text-align: left;
+}
+aside .logo_usuario button{
+	width: 150px;
+	text-align: left;
+	border-color: white;
+	background-color: white;
+}
+.img-ocul{	
+	visibility: hidden!important;
+	transition: all 110ms linear!important;	
+}
+aside .logo_usuario img{
+	visibility: visible;
+	transition: all 110ms linear!important;
+}
+aside .modulos{	
+	overflow-y: scroll;
+	overflow-x: hidden;	
+}
+aside .modulos-amp{	
+}
+aside .card-header{
+	background: #002C95!important;	
+}
+aside h2 button{
+	color: #fff!important;
+	text-decoration: none!important;
+	white-space: nowrap;
+}
+aside a{
+	white-space: nowrap;
+}
+
+/* Área trabajo */
+main{	
+	transition: all 200ms linear!important;	
+}
+main iframe{
+	width: 100%;	
+	border: 0;	
+}
+/* Contáctenos */
+.col-arr{
+	height: 70%;
+}
+.col-abj{
+	height: 30%;
+}
+
+/* Pie de página */
+footer{
+	background: #2D394B;
+}
+footer h6{
+	font-size: 0.6em;
+	margin: 0;
+}
+
+/* Tablet */
+@media only screen and (max-width: 991px) {
+	
+	#btn-menu-lateral i{	
+		margin-top: 0px;
+		padding: 5px;			
+	}
+
+	/* Principal */
+	section{
+		position: relative;		
+	}
+
+	/* Panel lateral */
+	aside{
+		/*height: auto;		*/
+		z-index: 1;		
+	}	
+	aside .modulos{
+		height: auto;
+	}
+
+	/* Área Principal */
+	main{
+		position: absolute!important;
+		height: 100%;		
+		z-index: -10;
+	}
+	main iframe{
+		width: 100%;		
+	}
+
+	/* Pie de página */
+	footer{		
+	}
+}
