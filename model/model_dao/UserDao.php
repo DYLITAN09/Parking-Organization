@@ -10,7 +10,7 @@
 		}
 		# Iniciar Sesión
 		public function loginStart($userDto){
-			$sql = 'SELECT * FROM usuarios WHERE
+			$sql = 'SELECT * FROM USUARIOS WHERE
 				usuario_correo = :userEmailLog AND
 				usuario_pass = sha1(:userPassLog)';
 			$dbh = $this->pdo->prepare($sql);
@@ -39,7 +39,7 @@
 		public function create($userDto){
 			try {
 				// Crear la Consulta
-				$sql = 'INSERT INTO usuarios VALUES (
+				$sql = 'INSERT INTO USUARIOS VALUES (
 							:idRol,
 							:idUser,
 							:docIdUser,
@@ -93,7 +93,7 @@
 		public function getById($idUser){
 			try {
 				# Consulta
-				$sql = "SELECT * FROM usuarios WHERE id_usuario=:id_usuario";
+				$sql = "SELECT * FROM USUARIOS WHERE id_usuario=:id_usuario";
 				# Preparar la BBDD
 				$dbh = $this->pdo->prepare($sql);
 				# Vincular los datos
@@ -123,7 +123,7 @@
 		public function update($userDto){
 			try {
 				# Consulta
-				$sql = 'UPDATE usuarios SET
+				$sql = 'UPDATE USUARIOS SET
 							id_rol = :idRol,
 							usuario_doc_identidad = :docIdUser,
 							usuario_nombres = :nameUser,
@@ -153,7 +153,7 @@
 		# Eliminar Usuario
 		public function delete($idUser){
 			try {
-				$sql = 'DELETE FROM usuarios WHERE id_usuario = :idUser';
+				$sql = 'DELETE FROM USUARIOS WHERE id_usuario = :idUser';
 				$dbh = $this->pdo->prepare($sql);
 				$dbh->bindValue('idUser', $idUser);
 				$dbh->execute();
