@@ -2,7 +2,7 @@
 	class DataBase{		
 		public function __construct(){}
 		public static function conexion(){
-			$pdo = new PDO('mysql:host=localhost;dbname=bbdd_parking_organization_2;charset=utf8','root','');
+			$pdo = new PDO('mysql:host=bsla2srwmwped7z4das1-mysql.services.clever-cloud.com;charset=utf8','ubzephhqm6y51uxk','FGbhprdAFTvyZcY5urZL');
 			$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 			return $pdo;
 		}
