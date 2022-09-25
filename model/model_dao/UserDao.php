@@ -66,11 +66,11 @@
 				die($e->getMessage());	
 			}
 		}
-		# Consultar o Listar Usuarios
+		# Consultar o Listar USUARIOS
 		public function read(){
 			try {
 				$userList = [];
-				$sql = 'SELECT * FROM usuarios';
+				$sql = 'SELECT * FROM USUARIOS';
 				$dbh = $this->pdo->query($sql);
 				foreach ($dbh->fetchAll() as $user) {
 					$userList[] = new UserDto(
